@@ -1,0 +1,9 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: proxy-api-service
+    src: ./
+    engine: python3.9
+    primary: true
+    run: uvicorn server.app:app
+    dev: env/bin/python main.py
